@@ -39,13 +39,19 @@
     @include media-breakpoint-down(lg) {
       padding: 20px;
     }
+  }
+}
 
-    & > div {
-      a {
-        @include media-breakpoint-down(lg) {
-          margin: 0 auto 10px !important;
-        }
-      }
+.collapseBtn {
+  &:hover {
+    &::after {
+      width: 0 !important;
     }
+  }
+  
+  @include media-breakpoint-down(lg) {
+    margin: 0 auto 10px !important;
+    width: max-content;
+    padding: 6px 22px;
   }
 }

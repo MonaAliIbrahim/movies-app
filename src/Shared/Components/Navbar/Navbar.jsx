@@ -22,19 +22,35 @@ export default function AppNavbar({userData,logout}) {
               <Nav.Link to="" eventKey={1} as={Link}>Home</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link to="/movies" eventKey={3} as={Link}>Movies</Nav.Link>
+              <Nav.Link to="/movies" eventKey={2} as={Link}>Movies</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link to="/tvShow" eventKey={4} as={Link}>TvShow</Nav.Link>
+              <Nav.Link to="/tvShow" eventKey={3} as={Link}>TvShow</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link to="/people" eventKey={2} as={Link}>People</Nav.Link>
+              <Nav.Link to="/people" eventKey={4} as={Link}>People</Nav.Link>
             </Nav.Item>
           </Nav>}
           {!userData &&
           <Nav className="ms-auto" navbarScroll>
-            <Link className="ms-auto pb-2 me-2 btn custon-btn" to="/login">Login</Link>
-            <Link className="ms-auto pb-2 btn custon-btn" to="/register">Register</Link>
+            <Nav.Item>
+              <Nav.Link 
+                to="/login"
+                as={Link}
+                eventKey={5}
+                className={`${styles.collapseBtn} ms-auto pb-2 me-2 btn custon-btn`}>
+                Login
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link 
+                to="/register"
+                as={Link}
+                eventKey={6} 
+                className={`${styles.collapseBtn} ms-auto pb-2 me-2 btn custon-btn`}>
+                Register
+              </Nav.Link>
+            </Nav.Item>
           </Nav>}
           {userData &&
           <Button className="ms-auto pb-2 btn custon-btn" onClick={logout}>Logout</Button>}

@@ -54,6 +54,10 @@ a {
       }
 
       &.active {
+        color: $fontColor;
+      }
+
+      &:not(.btn).active {
         color: $themeColor !important;
       }
     }
