@@ -57,7 +57,7 @@ function App() {
         {path: 'register', element: <Register/>},
       ]
     }
-  ])
+  ], {basename: '/movies-app'})
 
   return (
     <AuthContextProvider>
