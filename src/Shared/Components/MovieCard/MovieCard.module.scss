@@ -1,0 +1,52 @@
+@import '../../../Assets/Styles/variables';
+
+.movieCard {
+  position: relative;
+  background-color: transparent;
+  overflow: hidden;
+  border: 0;
+
+  & > div {
+    overflow: hidden;
+    @include prefix(border-radius, 8px !important);
+  }
+
+  &:hover {
+    img {
+      @include prefix(transform, scale(1.15));
+    }
+  }
+
+  img {
+    @include prefix(transition, 0.4s all ease);
+  }
+
+  p {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $themeColor;
+    border-end-start-radius: 12px;
+
+    span {
+      color: $fontColor;
+      line-height: 0;
+    }
+  }
+}
+
+.title {
+  a {
+    font: {
+      size: 16px;
+      weight: 400;
+    }
+    color: $fontColor;
+    text-decoration: none;
+  }
+}

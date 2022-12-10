@@ -1,0 +1,51 @@
+@import '../../../Assets/Styles/variables';
+@import '../../../Assets/Styles/utilities';
+
+.navBar {
+  background-color: $bgColor;
+  border-bottom: 1px solid rgba(28,28,28,.6);
+  box-shadow: 1px 1px 30px rgba($themeColor, 0.5) !important;
+
+  span {  
+    a {
+      color: $themeColor !important;
+    }
+  }
+}
+
+.nav {
+  max-height: 100vh;
+
+  a {
+    color: rgba($fontColor, 0.85) !important;
+  
+    &:hover {
+      color: $themeColor !important;
+    }
+  }
+}
+
+.btnToggle {
+  border-color: $themeColor;
+  background-color: $bgColor;
+
+  &:hover,
+  &:focus {
+    outline: 0;
+    box-shadow: none;
+  }
+
+  & + div {
+    @include media-breakpoint-down(lg) {
+      padding: 20px;
+    }
+
+    & > div {
+      a {
+        @include media-breakpoint-down(lg) {
+          margin: 0 auto 10px !important;
+        }
+      }
+    }
+  }
+}

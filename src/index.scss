@@ -1,0 +1,99 @@
+@import "bootstrap/scss/bootstrap.scss";
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+@import './Assets/Styles/variables';
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Noto+Serif+Khojki:wght@400&display=swap');
+
+body {
+  font-family: 'Courgette', cursive;
+  background-color: $bgColor;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.custon-btn {
+  color: $themeColor;
+  background-color: transparent;
+  border: 1px solid $themeColor !important;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $fontColor !important;
+    background-color: $themeColor !important;
+    box-shadow: none;
+    outline: 0;
+  }
+}
+
+/** App Nabbar **/
+.app-nav {
+  .nav-item {
+    a {
+      position: relative;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 100%;
+        width: 0;
+        height: 1px;
+        background-color: $themeColor;
+        @include prefix(transition, 0.4s all ease);
+      }
+
+      &:hover{
+        &::after {
+          width: 100%;
+          right: 0;
+        }
+      }
+
+      &.active {
+        color: $themeColor !important;
+      }
+    }
+  }
+}
+
+/** Login & Register **/
+.form-btn {
+  background-color: transparent !important;
+  color: $fontColor;
+  border: 1px solid $fontColor;
+
+  &:hover,
+  &:active {
+    color: $themeColor;
+    border: 1px solid $themeColor !important;
+  }
+}
+
+/** Scrollbar **/
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-button {
+  width: 100%;
+  height: 100%;
+ }
+
+::-webkit-scrollbar-thumb {
+ border-radius: 5px;
+ background-color: $themeColor;
+}
+
+::-webkit-scrollbar-corner {
+ background-color: $bgColor;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-button {
+  background-color: $bgColor;
+}

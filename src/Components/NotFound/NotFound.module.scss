@@ -1,0 +1,24 @@
+@import '../../Assets/Styles/variables';
+
+.notFound {
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  p { 
+    font: {
+      size: 55px;
+      weight: 900;
+    }
+    text-align: center;
+    color: $fontColor;
+    letter-spacing: 6px;
+
+    span, 
+    a {
+      color: $themeColor;
+      letter-spacing: 0;
+    }
+  }
+}
